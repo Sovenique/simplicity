@@ -246,4 +246,3 @@ will be redirected to *static/index.html* giving access to Angular to manage the
 Next, we just build our project and generate the JAR file.
 
 Once the application has started, we will be able to see the welcome page.
-# simplicity
