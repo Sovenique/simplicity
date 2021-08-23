@@ -16,4 +16,5 @@ pipeline {
                 sh 'mvn org.owasp:dependency-check-maven:aggregate'
             }
         } 
+    }
 }
