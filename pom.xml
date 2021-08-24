@@ -23,8 +23,8 @@
 	<pluginManagement>
 		<plugins>	
 			<plugin>
-				<plugin> <groupId>org.sonarsource.scanner.maven</groupId> <artifactId>sonar-maven-plugin</artifactId> <version>${version.sonar}</version> </plugin>
-				<groupId>org.owasp</groupId>
+				 <groupId>org.sonarsource.scanner.maven</groupId> <artifactId>sonar-maven-plugin</artifactId> <version>${version.sonar}</version> </plugin>
+				<plugin> <groupId>org.owasp</groupId>
           		<artifactId>dependency-check-maven</artifactId>
           		<version>${version.dependency-check-maven}</version>
          		<configuration>
