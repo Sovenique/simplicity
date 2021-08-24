@@ -16,15 +16,14 @@
 
     <properties>
     <java.version>1.8</java.version>
-	<sonarjava.version>6.15.1.26025</sonarjava.version>
-	<version.sonar>	3.7.0.1746 </version.sonar>
+	<version.sonar>3.7.0.1746</version.sonar>
     <version.dependency-check-maven>6.2.0</version.dependency-check-maven>
 </properties>
 <build> 
 	<pluginManagement>
 		<plugins>	
 			<plugin>
-			 <groupId>org.sonarsource.scanner.maven</groupId> <artifactId>sonar-maven-plugin</artifactId> <version>${version.sonar}</version> </plugin>
+				<plugin> <groupId>org.sonarsource.scanner.maven</groupId> <artifactId>sonar-maven-plugin</artifactId> <version>${version.sonar}</version> </plugin>
 				<groupId>org.owasp</groupId>
           		<artifactId>dependency-check-maven</artifactId>
           		<version>${version.dependency-check-maven}</version>
