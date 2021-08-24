@@ -18,7 +18,7 @@ pipeline {
         } 
         stage('Sonar Analysis') {
             steps {
-                sh 'mvn sonar:sonar -Dsonar.projectName=simplicity -Dsonar.host.url=${Sonar URL} -Dsonar.login=${Simplicity}
+                sh 'mvn sonar:sonar -Dsonar.projectName=simplicity -Dsonar.host.url=${Sonar URL} -Dsonar.login=${Simplicity}'
             }
         }
     }
