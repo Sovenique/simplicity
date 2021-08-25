@@ -13,7 +13,7 @@
     <artifactId>frontend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
       <properties>
-        <sonar.sources>src/app</sonar.sources>
+        <sonar.sources>src/app,e2e/src</sonar.sources>
     </properties>
     <build>
         <resources>
