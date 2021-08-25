@@ -17,6 +17,7 @@
     <properties>
     <java.version>1.8</java.version>
 	<version.sonar>3.4.0.905</version.sonar>
+	<sonar.sources>frontend/js</sonar.sources>
     <version.dependency-check-maven>6.2.0</version.dependency-check-maven>
 </properties>
 <build> 
@@ -58,3 +59,4 @@
     </modules>
 
 </project>
+
