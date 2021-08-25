@@ -25,11 +25,13 @@
     <version.dependency-check-maven>6.2.0</version.dependency-check-maven>
 </properties>
 
+	<dependencies>
 	<dependency>
     <groupId>org.jacoco</groupId> 
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.6</version>
     </dependency>
+	</dependencies>
 <build> 
 	<pluginManagement>
 		<plugins>	
