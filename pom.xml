@@ -23,14 +23,14 @@
     <sonar.language>java</sonar.language>
 	<version.sonar>3.4.0.905</version.sonar>
     <version.dependency-check-maven>6.2.0</version.dependency-check-maven>
-</properties>
+	</properties>
 
 	<dependencies>
-	<dependency>
-    <groupId>org.jacoco</groupId> 
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>0.8.6</version>
-    </dependency>
+		<dependency>
+			<groupId>org.jacoco</groupId> 
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.6</version>
+		</dependency>
 	</dependencies>
 <build> 
 	<pluginManagement>
@@ -59,28 +59,27 @@
 		              </fileSet>
 		            </scanSet>-->
           		</configuration>
-				  <plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>${jacoco.version}</version>
-    <executions>
-        <execution>
-            <id>jacoco-initialize</id>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>jacoco-site</id>
-            <phase>package</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-     </plugin>
     		</plugin> 
-		
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
+						<id>jacoco-initialize</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-site</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
     	</plugins> 
     </pluginManagement> 
 </build>
@@ -92,4 +91,3 @@
     </modules>
 
 </project>
-
