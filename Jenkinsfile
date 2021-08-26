@@ -36,7 +36,7 @@ pipeline {
                     '''
 
                  sh     '''
-                 curl -X "PUT" ${DEPENDENCY_TRACK_URL} -H 'Content-Type: application/json' -H 'X-API-Key: '${DEPENDENCY_TRACK_API_KEY} -d @payload.json
+                 curl -X "PUT" http://cicd-dt.eurodyn.com/api/v1/bom -H 'Content-Type: application/json' -H 'X-API-Key: 'W6F6Lh73RK2JJ5RN1Gxy4Zif4IUDET1r -d @payload.json
                 '''
             }
         }
