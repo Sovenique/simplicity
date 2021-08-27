@@ -12,11 +12,12 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-         stage('Dependencies Check') {
+          stage('Dependencies Check') {
             steps {
+                sh 'update-java-alternatives -s java-1.8.0-openjdk-amd64'
                 sh 'mvn org.owasp:dependency-check-maven:aggregate'
             }
-        } 
+        }
         stage('Sonar Analysis') {
             steps {
                 sh 'mvn sonar:sonar -Dsonar.projectName=Simplicities -Dsonar.host.url=${Sonar_URL} -Dsonar.login=${Simplicity}'
