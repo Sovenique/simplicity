@@ -12,14 +12,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>frakton</name>
 	<description>Demo project for Spring Boot</description>
-
 	<properties>
 		<java.version>1.8</java.version>
 		<version.jacoco>0.8.6</version.jacoco>
 		<version.sonar>3.4.0.905</version.sonar>
 		<version.dependency-check-maven>6.2.0</version.dependency-check-maven>
 	</properties>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -89,10 +87,8 @@
 		</pluginManagement>
 	</build>
 	<packaging>pom</packaging>
-
 	<modules>
 		<module>backend</module>
 		<module>frontend</module>
 	</modules>
-
 </project>

@@ -1,7 +1,9 @@
 pipeline {
-    agent any 
-     tools { 
-        maven 'MAVEN' 
+   agent {
+        docker {
+            image 'eddevopsd2/maven-java-npm-docker:mvn3.6.3-jdk11-npm6.14.4-docker'
+            args '-v /root/.m2:/root/.m2'
+        }
     }
     stages {
         stage('Build') {
