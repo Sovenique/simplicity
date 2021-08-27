@@ -1,4 +1,5 @@
 pipeline {
+   
    agent {
         docker {
             image 'eddevopsd2/maven-java-npm-docker:mvn3.6.3-jdk11-npm6.14.4-docker'
@@ -18,7 +19,7 @@ pipeline {
         } 
         stage('Sonar Analysis') {
             steps {
-                sh '/opt/sonar-scanner/bin/sonar-scanner -Dsonar.projectName=simplicity -Dsonar.host.url=${Sonar_URL} -Dsonar.login=${Simplicity}'
+                sh 'mvn sonar:sonar -Dsonar.projectName=${Simplicity} -Dsonar.host.url=${Sonar_URL} -Dsonar.login=${SonarQube}'
             }
         }
         stage('Produce bom.xml'){
