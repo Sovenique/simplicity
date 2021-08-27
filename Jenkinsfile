@@ -11,20 +11,24 @@ pipeline {
             steps {
                 sh 'update-java-alternatives -s java-1.8.0-openjdk-amd64'
                 sh 'mvn clean install'
+                sh 'java -version'
             }
         }
           stage('Dependencies Check') {
-            steps {          
+            steps {
+                sh 'java -version'          
                 sh 'mvn org.owasp:dependency-check-maven:aggregate'
             }
         }
         stage('Sonar Analysis') {
             steps {
+                sh 'java -version'
                 sh 'mvn sonar:sonar -Dsonar.projectName=Simplicities -Dsonar.host.url=${Sonar_URL} -Dsonar.login=${Simplicity}'
             }
         }
         stage('Produce bom.xml'){
              steps{
+                sh 'java -version'
                 sh 'mvn org.cyclonedx:cyclonedx-maven-plugin:makeAggregateBom'
             }
         }
