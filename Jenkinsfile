@@ -9,12 +9,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'update-java-alternatives -s java-1.8.0-openjdk-amd64'
                 sh 'mvn clean install'
             }
         }
           stage('Dependencies Check') {
-            steps {
-                sh 'update-java-alternatives -s java-1.8.0-openjdk-amd64'
+            steps {          
                 sh 'mvn org.owasp:dependency-check-maven:aggregate'
             }
         }
