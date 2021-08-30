@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('File transfer'){
             steps{
-                sh('scp -v -o "StrictHostKeyChecking=no" /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
+                sh('scp -v /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
             }
         }
         stage('Build') {
