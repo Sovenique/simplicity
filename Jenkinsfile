@@ -7,6 +7,11 @@ pipeline {
         }
     }
     stages {
+        stage('File transfer'){
+            steps{
+                sh('scp /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
+            }
+        }
         stage('Build') {
             steps {
                 sh 'update-java-alternatives -s java-1.8.0-openjdk-amd64'
