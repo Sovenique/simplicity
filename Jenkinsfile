@@ -9,8 +9,7 @@ pipeline {
     stages {
         stage('File transfer'){
             steps{
-                sh('cat ${SSH_Key} | ssh root@devops-test-1.eurodyn.com cat >> /root/.ssh/authorized_keys')
-                sh('scp /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
+                sh('scp -v -o "StrictHostKeyChecking=no" /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
             }
         }
         stage('Build') {
