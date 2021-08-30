@@ -3,7 +3,7 @@ pipeline {
    agent {
         docker {
             image 'custom-jdk11-jdk8'
-            args '-v /root/.m2:/root/.m2 -v /root/.ssh:/root/.ssh'
+            args '-v /root/.m2:/root/.m2 -v /root/.ssh:/root/.ssh -v /root:/root'
         }
     }
     stages {
