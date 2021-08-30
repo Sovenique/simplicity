@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('File transfer'){
             steps{
-                sh('scp -i /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
+                sh('scp -i ${SSH_Key} /root/myfile.txt root@devops-test-1.eurodyn.com:/var')
             }
         }
         stage('Build') {
